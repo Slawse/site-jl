@@ -1,7 +1,7 @@
-import About from '../components/About'
+import Domains from '../components/Domains'
 
 function Expertise() {
-  return <About />
+  return <Domains />
 }
 
 export default Expertise

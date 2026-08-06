@@ -2,10 +2,9 @@ import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
 const NAV_LINKS = [
+  { to: '/', label: 'Accueil', end: true },
   { to: '/expertise', label: 'Expertise' },
-  { to: '/services', label: 'Services' },
   { to: '/approche', label: 'Approche' },
-  { to: '/contact', label: 'Contact' },
 ]
 
 function Header() {
@@ -27,6 +26,7 @@ function Header() {
             <NavLink
               key={link.to}
               to={link.to}
+              end={link.end}
               className={({ isActive }) => (isActive ? 'active' : undefined)}
             >
               {link.label}
@@ -58,7 +58,7 @@ function Header() {
 
       <div className={`mobile-menu${open ? ' open' : ''}`}>
         {NAV_LINKS.map((link) => (
-          <NavLink key={link.to} to={link.to} onClick={() => setOpen(false)}>
+          <NavLink key={link.to} to={link.to} end={link.end} onClick={() => setOpen(false)}>
             {link.label}
           </NavLink>
         ))}
