@@ -4,7 +4,7 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import Expertise from './pages/Expertise'
 import ServicesPage from './pages/ServicesPage'
-import ApprochePage from './pages/ApprochePage'
+import SolutionPage from './pages/SolutionPage'
 import ContactPage from './pages/ContactPage'
 
 function ScrollToTop() {
@@ -26,7 +26,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="expertise" element={<Expertise />} />
           <Route path="services" element={<ServicesPage />} />
-          <Route path="approche" element={<ApprochePage />} />
+          <Route path="solution" element={<SolutionPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
       </Routes>

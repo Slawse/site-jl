@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom'
 const NAV_LINKS = [
   { to: '/', label: 'Accueil', end: true },
   { to: '/expertise', label: 'Expertise' },
-  { to: '/approche', label: 'Approche' },
+  { to: '/solution', label: 'Ma solution' },
 ]
 
 function Header() {
