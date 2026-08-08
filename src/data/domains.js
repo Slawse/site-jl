@@ -1,3 +1,5 @@
+import domainChantierImg from '../assets/domain-chantier.jpg'
+
 export const DOMAINS = [
   {
     number: '01',
@@ -89,6 +91,7 @@ export const DOMAINS = [
   {
     number: '05',
     title: 'Conception et évolution des environnements de laboratoire',
+    image: domainChantierImg,
     intro: [
       "J'interviens en assistance à la maîtrise d'ouvrage lors de la création, de l'extension, du déménagement, de la réorganisation ou de la fermeture d'un laboratoire.",
     ],
