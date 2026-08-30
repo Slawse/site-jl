@@ -48,6 +48,9 @@ function Footer() {
 
       <div className="container footer-bottom">
         <p>© {year} Jean-Louis Labernardière — JLL Conseil &amp; Innovation</p>
+        <Link to="/mentions-legales" className="footer-legal-link">
+          Mentions légales
+        </Link>
       </div>
     </footer>
   )

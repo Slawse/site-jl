@@ -6,6 +6,7 @@ import Expertise from './pages/Expertise'
 import ServicesPage from './pages/ServicesPage'
 import SolutionPage from './pages/SolutionPage'
 import ContactPage from './pages/ContactPage'
+import MentionsLegales from './pages/MentionsLegales'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -28,6 +29,7 @@ function App() {
           <Route path="services" element={<ServicesPage />} />
           <Route path="solution" element={<SolutionPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="mentions-legales" element={<MentionsLegales />} />
         </Route>
       </Routes>
     </>
