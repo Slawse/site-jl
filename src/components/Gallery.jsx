@@ -1,4 +1,12 @@
-const PLACEHOLDER_COUNT = 4
+import bandeau1 from '../assets/gallery-bandeau1.jpg'
+import bandeau2 from '../assets/gallery-bandeau2.jpg'
+import bandeau3 from '../assets/gallery-bandeau3.jpg'
+
+const PHOTOS = [
+  { src: bandeau1, caption: "Installation d'équipements de protection collective (PSM II et isolateur) dans une salle blanche" },
+  { src: bandeau2, caption: 'Laboratoire — aménagement et mise en service des paillasses' },
+  { src: bandeau3, caption: 'Chantier — infrastructures techniques en cours de déploiement' },
+]
 
 function Gallery() {
   return (
@@ -7,24 +15,16 @@ function Gallery() {
         <div className="section-heading">
           <span className="eyebrow">Réalisations</span>
           <h2>Sur le terrain, dans les laboratoires</h2>
-          <p>
-            Quelques environnements de laboratoires accompagnés au fil des missions.
-            Photos à venir.
-          </p>
+          <p>Quelques environnements de laboratoires accompagnés au fil des missions.</p>
         </div>
 
         <div className="gallery-grid">
-          {Array.from({ length: PLACEHOLDER_COUNT }).map((_, i) => (
-            <div className="gallery-item" key={i}>
-              <div className="gallery-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <circle cx="8.5" cy="10.5" r="1.5" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 15l-5-5-9 9" />
-                </svg>
-                <span>Photo à venir</span>
+          {PHOTOS.map((photo) => (
+            <div className="gallery-item" key={photo.src}>
+              <div className="gallery-placeholder gallery-photo">
+                <img src={photo.src} alt={photo.caption} />
               </div>
-              <p className="gallery-caption">Laboratoire — légende à venir</p>
+              <p className="gallery-caption">{photo.caption}</p>
             </div>
           ))}
         </div>

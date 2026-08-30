@@ -1,9 +1,15 @@
 import domainChantierImg from '../assets/domain-chantier.jpg'
+import domainQualiteImg from '../assets/domain-qualite.jpg'
+import domainDataiaImg from '../assets/domain-dataia.jpg'
+import domainRisqueImg from '../assets/domain-risque.jpg'
+import domainLabOperationsImg from '../assets/domain-lab-operations.jpg'
+import domainResilienceImg from '../assets/domain-resilience.jpg'
 
 export const DOMAINS = [
   {
     number: '01',
     title: 'Assurance qualité et démarches réglementaires',
+    image: domainQualiteImg,
     intro: [
       "J'accompagne les entreprises dans la définition, la mise en place et l'amélioration de systèmes qualité proportionnés à leurs activités, à leurs risques et à leur niveau de maturité.",
       "J'apporte également mon expertise pour piloter les autorisations nécessaires au développement des projets scientifiques notamment en matière de CODECOH, d'OGM et de confinement biologique.",
@@ -27,7 +33,8 @@ export const DOMAINS = [
   },
   {
     number: '02',
-    title: 'Management et intégrité des données scientifiques',
+    title: 'Management, intégrité des données scientifiques et gouvernance IA',
+    image: domainDataiaImg,
     intro: [
       "Les données constituent un élément essentiel du patrimoine scientifique et de la valeur de l'entreprise et reste souvent un « parent pauvre » des organisations.",
       "J'accompagne les équipes dans la structuration du cycle de vie des données, depuis leur génération sur les instruments de laboratoire/plateformes jusqu'à leur stockage, leur utilisation et leur archivage.",
@@ -39,6 +46,7 @@ export const DOMAINS = [
       'l\'infrastructure « data » incluant l\'organisation du stockage, des sauvegardes et de l\'archivage',
       "l'application des principes d'intégrité des données, notamment ALCOA",
       "l'accompagnement dans le choix ou le déploiement d'un ELN ou d'un LIMS",
+      "l'audit de la gouvernance des systèmes d'IA pour garantir des usages maîtrisés, des données protégées et des résultats traçables",
     ],
     body: [
       "La phase préclinique est une étape déterminante pour constituer un package de données robuste, traçable et crédible en vue des échéances clés de l'entreprise, notamment les levées de fonds, partenariats ou audits.",
@@ -49,6 +57,7 @@ export const DOMAINS = [
   {
     number: '03',
     title: 'Santé, sécurité et prévention des risques opérationnels au laboratoire',
+    image: domainRisqueImg,
     intro: [
       "J'accompagne les entreprises dans la structuration de leur démarche de santé et de sécurité au travail et dans la maîtrise de leurs obligations réglementaires.",
     ],
@@ -73,6 +82,7 @@ export const DOMAINS = [
   {
     number: '04',
     title: 'Lab operations et performance des activités scientifiques',
+    image: domainLabOperationsImg,
     intro: [
       "J'apporte mon support aux entreprises dans l'organisation et l'optimisation de leurs opérations au laboratoire afin de sécuriser les activités, soutenir le rythme d'exécution des projets scientifiques et optimiser l'utilisation des ressources en interne.",
     ],
@@ -117,6 +127,7 @@ export const DOMAINS = [
   {
     number: '06',
     title: "Continuité d'activité et résilience opérationnelle",
+    image: domainResilienceImg,
     intro: [
       "Il s'agit d'un angle souvent négligé par les jeunes organisations jusqu'au premier incident sérieux : panne d'un équipement critique, perte de données, indisponibilité d'un fournisseur, incidents sur les installations techniques (coupure électrique…), départ d'une personne clé.",
     ],

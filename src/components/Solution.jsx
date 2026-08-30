@@ -2,14 +2,13 @@ import { Link } from 'react-router-dom'
 
 const BLOCKS = [
   {
-    title: 'Une expertise adaptée aux entreprises scientifiques innovantes',
-    intro: "J'interviens principalement auprès :",
+    title: 'Un besoin ponctuel ou un accompagnement dans la durée',
+    intro: 'Mon intervention peut prendre plusieurs formes :',
     items: [
-      'de sociétés de biotechnologie au stade préclinique',
-      'de sociétés « techbio » associant biologie et data',
-      'de plateformes scientifiques et technologiques',
-      'de sociétés en création, en croissance ou en transformation',
-      "de sociétés souhaitant structurer leurs opérations avant une nouvelle étape de développement",
+      "mission ponctuelle pour un besoin de diagnostic ou pour le suivi d'un projet défini",
+      "préparation d'un audit ou d'une échéance réglementaire (AQ, data, lab operations)",
+      'support opérationnel régulier',
+      'fonction qualité, lab manager ou HSE externalisée ou à temps partagé',
     ],
   },
   {
@@ -27,16 +26,6 @@ const BLOCKS = [
       "audit HSE et définition d'un plan d'action correctif",
     ],
     dense: true,
-  },
-  {
-    title: 'Un besoin ponctuel ou un accompagnement dans la durée',
-    intro: 'Mon intervention peut prendre plusieurs formes :',
-    items: [
-      "mission ponctuelle pour un besoin de diagnostic ou pour le suivi d'un projet défini",
-      "préparation d'un audit ou d'une échéance réglementaire (AQ, data, lab operations)",
-      'support opérationnel régulier',
-      'fonction qualité, lab manager ou HSE externalisée ou à temps partagé',
-    ],
   },
 ]
 
@@ -61,20 +50,24 @@ function Solution() {
               </ul>
             </div>
           ))}
+        </div>
+      </div>
 
-          <div className="solution-card solution-cta">
+      <div className="solution-cta-banner">
+        <div className="container solution-cta-banner-inner">
+          <div>
             <h3>Parlons de vos enjeux</h3>
             <p>
-              Vous souhaitez structurer votre organisation qualité, sécuriser
-              vos données, préparer une démarche réglementaire, renforcer
-              votre politique HSE, maîtriser vos opérations au labo ou
-              accompagner l'évolution de votre laboratoire ?
+              Structurer votre organisation qualité, sécuriser vos données,
+              préparer une démarche réglementaire, renforcer votre politique
+              HSE, maîtriser vos opérations au labo ou accompagner
+              l'évolution de votre laboratoire ? Échangeons sur votre
+              situation et sur les solutions adaptées à votre organisation.
             </p>
-            <p>Échangeons sur votre situation et sur les solutions adaptées à votre organisation.</p>
-            <Link to="/contact" className="btn btn-primary">
-              Prendre contact
-            </Link>
           </div>
+          <Link to="/contact" className="btn btn-primary">
+            Prendre contact
+          </Link>
         </div>
       </div>
     </section>

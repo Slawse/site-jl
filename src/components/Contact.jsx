@@ -1,15 +1,32 @@
-const CONTACT_EMAIL = 'contact@jll-conseil-innovation.fr'
+import { useState } from 'react'
+
+const CONTACT_EMAIL = 'j.labernardiere@gmail.com'
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnpqaqel'
 
 function Contact() {
-  function handleSubmit(e) {
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
+
+  async function handleSubmit(e) {
     e.preventDefault()
     const form = e.target
-    const name = form.name.value
-    const email = form.email.value
-    const message = form.message.value
-    const subject = encodeURIComponent(`Prise de contact — ${name}`)
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`)
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
+    setStatus('sending')
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -34,19 +51,11 @@ function Contact() {
                 </span>
                 {CONTACT_EMAIL}
               </div>
-              <div className="contact-detail">
-                <span className="contact-detail-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11z" />
-                    <circle cx="12" cy="10" r="2.4" />
-                  </svg>
-                </span>
-                Paris, Île-de-France
-              </div>
             </div>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
+            <input type="hidden" name="_subject" value="Nouvelle demande de contact — site JLL" />
             <div className="form-row">
               <div className="form-field">
                 <label htmlFor="name">Nom</label>
@@ -61,9 +70,20 @@ function Contact() {
               <label htmlFor="message">Votre message</label>
               <textarea id="message" name="message" rows={5} required placeholder="Décrivez votre projet ou votre besoin..." />
             </div>
-            <button type="submit" className="btn btn-primary">
-              Envoyer le message
+            <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
+              {status === 'sending' ? 'Envoi en cours…' : 'Envoyer le message'}
             </button>
+
+            {status === 'success' && (
+              <p className="form-status form-status-success">
+                Merci, votre message a bien été envoyé. Je reviens vers vous rapidement.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="form-status form-status-error">
+                Une erreur est survenue lors de l'envoi. Vous pouvez aussi écrire directement à {CONTACT_EMAIL}.
+              </p>
+            )}
           </form>
         </div>
       </div>

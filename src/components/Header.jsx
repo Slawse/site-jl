@@ -16,8 +16,8 @@ function Header() {
         <Link to="/" className="brand">
           <span className="brand-mark">JL</span>
           <span className="brand-text">
-            <span className="brand-name">Jean-Louis Labernardière</span>
-            <span className="brand-tagline">JLL Conseil &amp; Innovation</span>
+            <span className="brand-name">JLL Conseil &amp; Innovation</span>
+            <span className="brand-tagline">Jean-Louis Labernardière</span>
           </span>
         </Link>
 

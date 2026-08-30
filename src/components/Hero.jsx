@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import photo from '../assets/jl-photo.jpg'
 
-const TAGS = ['Qualité', 'HSE', 'Équipements', 'Data & réglementaire']
+const TAGS = ['Structurer', 'Sécuriser', "Accélérer l'innovation scientifique"]
 
 function Hero() {
   return (
@@ -10,8 +10,8 @@ function Hero() {
         <div className="hero-grid">
           <div className="hero-copy">
             <span className="eyebrow">Conseil en opérations &amp; performance</span>
-            <h1>Jean-Louis Labernardière</h1>
-            <p className="role">Consultant indépendant · Laboratoires biotech</p>
+            <p className="hero-name">Jean-Louis Labernardière</p>
+            <h1>Faire performer les laboratoires qui portent l'innovation</h1>
 
             <ul className="hero-tags">
               {TAGS.map((tag) => (
@@ -21,35 +21,31 @@ function Hero() {
               ))}
             </ul>
 
-            <p className="hero-hook">
-              Faire performer les laboratoires qui portent l'innovation
-            </p>
-
             <div className="lede-group">
               <p className="lede">
-                J'accompagne les biotechs, medtechs et entreprises scientifiques,
-                notamment au stade préclinique, dans la structuration et la
-                sécurisation de leurs opérations.
+                J'accompagne les biotechs, medtechs et entreprises techbio,
+                notamment au stade préclinique, dans la structuration, la
+                sécurisation et l'accélération de leurs opérations.
               </p>
               <p className="lede">
-                Qualité, réglementaire, HSE, data, équipements et organisation :
-                je mobilise plus de 25 ans d'expérience pour construire des
-                environnements robustes, conformes et efficaces.
+                Qualité, réglementaire, HSE, data, Lab Operations et
+                environnements de laboratoire : je mobilise plus de 25 ans
+                d'expérience pour construire des organisations robustes,
+                conformes et efficientes. Mon approche est résolument
+                opérationnelle, proche du terrain et adaptée au niveau de
+                maturité de chaque entreprise.
               </p>
               <p className="lede">
-                Mon approche est résolument opérationnelle, proche du terrain et
-                sans complexité inutile.
-              </p>
-              <p className="lede">
-                L'objectif : accélérer l'exécution et permettre aux équipes de se
-                concentrer sur l'essentiel : la science et l'innovation.
+                Un objectif : sécuriser l'exécution et permettre aux équipes
+                de se concentrer sur la science, l'innovation et les
+                prochaines étapes de développement.
               </p>
             </div>
             <div className="hero-actions">
               <Link to="/contact" className="btn btn-primary">
                 Discuter de votre projet
               </Link>
-              <Link to="/services" className="btn btn-outline">
+              <Link to="/expertise" className="btn btn-outline">
                 Découvrir l'expertise
               </Link>
             </div>
@@ -65,12 +61,12 @@ function Hero() {
         <div className="stats-bar">
           <div className="stats-inner">
             <div className="stat-item">
-              <div className="stat-value">25 ans</div>
+              <div className="stat-value">25 ans d'expérience</div>
               <div className="stat-label">Au service de la R&amp;D de sociétés innovantes</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">Biotech</div>
-              <div className="stat-label">Sciences de la vie &amp; développement préclinique</div>
+              <div className="stat-value">Expertise Biotech</div>
+              <div className="stat-label">Qualité, HSE, data &amp; environnements de laboratoire</div>
             </div>
             <div className="stat-item">
               <div className="stat-value">De la stratégie à l'exécution</div>
