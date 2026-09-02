@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
 import { HIGHLIGHTS } from '../data/highlights'
+import { useLanguage } from '../i18n/LanguageContext'
 
 function HighlightModal({ activeSlug, onClose }) {
-  const active = HIGHLIGHTS.find((h) => h.slug === activeSlug)
+  const { t, lang } = useLanguage()
+  const active = HIGHLIGHTS[lang].find((h) => h.slug === activeSlug)
 
   useEffect(() => {
     document.body.style.overflow = 'hidden'
@@ -21,7 +23,7 @@ function HighlightModal({ activeSlug, onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-        <button type="button" className="modal-close" onClick={onClose} aria-label="Fermer">
+        <button type="button" className="modal-close" onClick={onClose} aria-label={t.domains.close}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />
           </svg>

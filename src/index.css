@@ -279,6 +279,28 @@ section {
   gap: 28px;
 }
 
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink-700);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-toggle:hover {
+  border-color: var(--ink-900);
+  color: var(--ink-900);
+}
+
+.lang-toggle-mobile {
+  margin: 4px 32px 0;
+  align-self: flex-start;
+}
+
 .nav-toggle {
   display: none;
   background: none;

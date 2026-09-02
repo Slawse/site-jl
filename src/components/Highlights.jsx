@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { HIGHLIGHTS } from '../data/highlights'
 import HighlightModal from './HighlightModal'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const ICONS = {
   target: (
@@ -38,12 +39,14 @@ const ICONS = {
 
 function Highlights() {
   const [activeSlug, setActiveSlug] = useState(null)
+  const { t, lang } = useLanguage()
+  const items = HIGHLIGHTS[lang]
 
   return (
     <section className="highlights">
       <div className="container">
         <div className="highlights-grid">
-          {HIGHLIGHTS.map((item) => (
+          {items.map((item) => (
             <button
               type="button"
               className="highlight-card"
@@ -53,7 +56,7 @@ function Highlights() {
               <div className="service-icon">{ICONS[item.icon]}</div>
               <h3>{item.title}</h3>
               <p>{item.excerpt}</p>
-              <span className="highlight-link">En savoir plus →</span>
+              <span className="highlight-link">{t.highlights.readMore}</span>
             </button>
           ))}
         </div>

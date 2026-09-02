@@ -1,4 +1,8 @@
+import { useLanguage } from '../i18n/LanguageContext'
+
 function DomainImage({ domain, className = '', showLabel = true }) {
+  const { t } = useLanguage()
+
   return (
     <div className={`domain-image-placeholder ${className}`}>
       {domain.image ? (
@@ -10,7 +14,7 @@ function DomainImage({ domain, className = '', showLabel = true }) {
             <circle cx="8.5" cy="10.5" r="1.5" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 15l-5-5-9 9" />
           </svg>
-          {showLabel && <span>Image à venir</span>}
+          {showLabel && <span>{t.domains.imageComingSoon}</span>}
         </>
       )}
     </div>

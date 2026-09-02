@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-
-const NAV_LINKS = [
-  { to: '/', label: 'Accueil', end: true },
-  { to: '/expertise', label: 'Expertise' },
-  { to: '/solution', label: 'Ma solution' },
-]
+import { useLanguage } from '../i18n/LanguageContext'
 
 function Header() {
   const [open, setOpen] = useState(false)
+  const { t, lang, toggleLang } = useLanguage()
+
+  const NAV_LINKS = [
+    { to: '/', label: t.header.navHome, end: true },
+    { to: '/expertise', label: t.header.navExpertise },
+    { to: '/solution', label: t.header.navSolution },
+  ]
 
   return (
     <header className="site-header">
@@ -16,8 +18,8 @@ function Header() {
         <Link to="/" className="brand">
           <span className="brand-mark">JL</span>
           <span className="brand-text">
-            <span className="brand-name">JLL Conseil &amp; Innovation</span>
-            <span className="brand-tagline">Jean-Louis Labernardière</span>
+            <span className="brand-name">{t.header.brandName}</span>
+            <span className="brand-tagline">{t.header.brandTagline}</span>
           </span>
         </Link>
 
@@ -35,13 +37,21 @@ function Header() {
         </nav>
 
         <div className="header-actions">
+          <button
+            type="button"
+            className="lang-toggle"
+            onClick={toggleLang}
+            aria-label={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
+          >
+            {t.header.langSwitch}
+          </button>
           <Link to="/contact" className="btn btn-primary">
-            Prendre contact
+            {t.header.contactCta}
           </Link>
           <button
             type="button"
             className="nav-toggle"
-            aria-label="Ouvrir le menu"
+            aria-label={t.header.openMenu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
@@ -62,8 +72,15 @@ function Header() {
             {link.label}
           </NavLink>
         ))}
+        <button
+          type="button"
+          className="lang-toggle lang-toggle-mobile"
+          onClick={toggleLang}
+        >
+          {t.header.langSwitch}
+        </button>
         <Link to="/contact" className="btn btn-primary" onClick={() => setOpen(false)}>
-          Prendre contact
+          {t.header.contactCta}
         </Link>
       </div>
     </header>

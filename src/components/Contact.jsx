@@ -1,10 +1,13 @@
 import { useState } from 'react'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const CONTACT_EMAIL = 'j.labernardiere@gmail.com'
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnpqaqel'
 
 function Contact() {
   const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const { t } = useLanguage()
+  const c = t.contact
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -34,13 +37,9 @@ function Contact() {
       <div className="container">
         <div className="contact-grid">
           <div className="contact-info">
-            <span className="eyebrow">Contact</span>
-            <h2>Parlons de votre projet</h2>
-            <p className="lede">
-              Une question, un besoin d'audit ou un projet de réorganisation
-              de laboratoire ? Décrivez votre contexte, je reviens vers vous
-              rapidement pour en discuter.
-            </p>
+            <span className="eyebrow">{c.eyebrow}</span>
+            <h2>{c.title}</h2>
+            <p className="lede">{c.lede}</p>
 
             <div className="contact-details">
               <div className="contact-detail">
@@ -58,30 +57,28 @@ function Contact() {
             <input type="hidden" name="_subject" value="Nouvelle demande de contact — site JLL" />
             <div className="form-row">
               <div className="form-field">
-                <label htmlFor="name">Nom</label>
-                <input id="name" name="name" type="text" required placeholder="Votre nom" />
+                <label htmlFor="name">{c.nameLabel}</label>
+                <input id="name" name="name" type="text" required placeholder={c.namePlaceholder} />
               </div>
               <div className="form-field">
-                <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="email" required placeholder="vous@entreprise.com" />
+                <label htmlFor="email">{c.emailLabel}</label>
+                <input id="email" name="email" type="email" required placeholder={c.emailPlaceholder} />
               </div>
             </div>
             <div className="form-field">
-              <label htmlFor="message">Votre message</label>
-              <textarea id="message" name="message" rows={5} required placeholder="Décrivez votre projet ou votre besoin..." />
+              <label htmlFor="message">{c.messageLabel}</label>
+              <textarea id="message" name="message" rows={5} required placeholder={c.messagePlaceholder} />
             </div>
             <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
-              {status === 'sending' ? 'Envoi en cours…' : 'Envoyer le message'}
+              {status === 'sending' ? c.sending : c.submit}
             </button>
 
             {status === 'success' && (
-              <p className="form-status form-status-success">
-                Merci, votre message a bien été envoyé. Je reviens vers vous rapidement.
-              </p>
+              <p className="form-status form-status-success">{c.success}</p>
             )}
             {status === 'error' && (
               <p className="form-status form-status-error">
-                Une erreur est survenue lors de l'envoi. Vous pouvez aussi écrire directement à {CONTACT_EMAIL}.
+                {c.error} {CONTACT_EMAIL}.
               </p>
             )}
           </form>

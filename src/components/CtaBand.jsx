@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../i18n/LanguageContext'
 
 function CtaBand() {
+  const { t } = useLanguage()
+
   return (
     <section className="cta-band">
       <div className="container cta-band-inner">
         <div>
-          <h2>Un projet de laboratoire à optimiser ?</h2>
-          <p>Discutons de votre contexte et de vos enjeux opérationnels.</p>
+          <h2>{t.ctaBand.title}</h2>
+          <p>{t.ctaBand.text}</p>
         </div>
         <Link to="/contact" className="btn btn-primary">
-          Prendre contact
+          {t.ctaBand.cta}
         </Link>
       </div>
     </section>

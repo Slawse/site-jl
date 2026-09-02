@@ -1,7 +1,11 @@
 import { useEffect } from 'react'
 import DomainImage from './DomainImage'
+import { useLanguage } from '../i18n/LanguageContext'
 
 function DomainModal({ domain, onClose, onPrev, onNext }) {
+  const { t } = useLanguage()
+  const d = t.domains
+
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     const onKeyDown = (e) => {
@@ -19,7 +23,7 @@ function DomainModal({ domain, onClose, onPrev, onNext }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-box domain-modal-box" onClick={(e) => e.stopPropagation()}>
-        <button type="button" className="modal-close" onClick={onClose} aria-label="Fermer">
+        <button type="button" className="modal-close" onClick={onClose} aria-label={d.close}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />
           </svg>
@@ -63,7 +67,7 @@ function DomainModal({ domain, onClose, onPrev, onNext }) {
               >
                 <path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" />
               </svg>
-              <span className="domain-highlight-label">Ce qui fait la différence</span>
+              <span className="domain-highlight-label">{d.differenceLabel}</span>
               <p>{domain.highlight}</p>
             </div>
 
@@ -74,12 +78,12 @@ function DomainModal({ domain, onClose, onPrev, onNext }) {
         </div>
 
         <div className="domain-modal-nav">
-          <button type="button" className="carousel-arrow" onClick={onPrev} aria-label="Domaine précédent">
+          <button type="button" className="carousel-arrow" onClick={onPrev} aria-label={d.prevAria}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 6l-6 6 6 6" />
             </svg>
           </button>
-          <button type="button" className="carousel-arrow" onClick={onNext} aria-label="Domaine suivant">
+          <button type="button" className="carousel-arrow" onClick={onNext} aria-label={d.nextAria}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" />
             </svg>
