@@ -1544,11 +1544,35 @@ section {
   .carousel-peek {
     display: none;
   }
-  .carousel-arrow-prev {
-    left: 8px;
+
+  .domain-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
   }
+
+  .carousel-stage {
+    order: 1;
+    flex: 1 1 100%;
+  }
+
+  .carousel-arrow {
+    position: static;
+    transform: none;
+  }
+
+  .carousel-arrow:hover {
+    transform: scale(1.08);
+  }
+
+  .carousel-arrow-prev {
+    order: 2;
+  }
+
   .carousel-arrow-next {
-    right: 8px;
+    order: 3;
   }
 }
 
