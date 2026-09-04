@@ -108,7 +108,7 @@ export const HIGHLIGHTS = {
       slug: 'excellence-operationnelle',
       title: 'Field orientation & operational excellence',
       excerpt:
-        'Quality, data, HSE, regulatory affairs, equipment: the levers for robust, agile organizations.',
+        'Quality - data - health, safety & environment, laboratory compliance & regulatory operations, equipment: the levers for robust, agile organizations.',
       icon: 'flag',
       paragraphs: [
         'I focus on all the operational levers capable of improving the efficiency of preclinical activities: quality, data management, HSE, regulatory affairs, equipment, and laboratory organization.',

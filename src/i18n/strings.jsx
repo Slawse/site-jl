@@ -215,19 +215,19 @@ export const STRINGS = {
       navHome: 'Home',
       navExpertise: 'Expertise',
       navSolution: 'My Approach',
-      contactCta: 'Get in touch',
+      contactCta: 'Contact',
       openMenu: 'Open menu',
       langSwitch: 'FR',
     },
     hero: {
       eyebrow: 'Operations & performance consulting',
       name: 'Jean-Louis Labernardière',
-      title: 'Helping innovation-driven laboratories perform',
+      title: 'Turning laboratory innovation into operational performance',
       tags: ['Structure', 'Secure', 'Accelerate scientific innovation'],
       lede1:
         'I support biotech, medtech and techbio companies, particularly at the preclinical stage, in structuring, securing and accelerating their operations.',
       lede2:
-        'Quality, regulatory, HSE, data, Lab Operations and laboratory environments: I draw on more than 25 years of experience to build robust, compliant and efficient organizations. My approach is firmly operational, close to the field, and tailored to each company\'s level of maturity.',
+        'Quality, Data, Laboratory compliance, Safety & Environment Lab Operations: I draw on more than 25 years of experience to build robust, compliant and efficient organizations. My approach is firmly operational, close to the field, and tailored to each company\'s level of maturity.',
       lede3:
         'The goal: secure execution and let teams focus on the science, the innovation, and the next stages of development.',
       ctaPrimary: 'Discuss your project',
@@ -256,7 +256,7 @@ export const STRINGS = {
     ctaBand: {
       title: 'A laboratory project to optimize?',
       text: "Let's discuss your context and operational challenges.",
-      cta: 'Get in touch',
+      cta: "Let's talk",
     },
     services: {
       eyebrow: 'Areas of intervention',
@@ -323,7 +323,7 @@ export const STRINGS = {
             'mapping and improving the traceability of scientific data',
             'part-time quality support',
             'design and fit-out of biotech labs',
-            'HSE audit and definition of a corrective action plan',
+            'Health, Safety & Environment audit and compliance roadmap',
           ],
         },
       ],

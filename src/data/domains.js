@@ -155,7 +155,7 @@ export const DOMAINS = {
       image: domainQualiteImg,
       intro: [
         'I support companies in defining, implementing and improving quality systems proportionate to their activities, their risks and their level of maturity.',
-        'I also bring my expertise to steering the approvals required for scientific projects, in particular in relation to Codecoh, GMOs and biological containment.',
+        'I also bring my expertise to steering the approvals required for scientific projects, in particular in relation to the French regulatory application for human biological sample collections (CODECOH), GMOs and biological containment.',
       ],
       bulletsIntro: 'My support can notably cover:',
       bullets: [
@@ -165,7 +165,7 @@ export const DOMAINS = {
         'drafting and rolling out procedures',
         'preparing and conducting audits (ISO 9001 and GxP compliance)',
         'bringing laboratory research activities into compliance',
-        'preparing and following up on regulatory processes, notably GMOs, biological containment or Codecoh',
+        'preparing and following up on regulatory processes, notably GMOs, biological containment or the French regulatory application for human biological sample collections (CODECOH)',
       ],
       body: [
         'Quality and regulatory topics are often complex, time-consuming and difficult to master for scientific teams unfamiliar with these requirements. Yet their impact on business continuity is still too often underestimated.',
