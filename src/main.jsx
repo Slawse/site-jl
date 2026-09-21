@@ -4,12 +4,14 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import { LanguageProvider } from './i18n/LanguageContext'
+import { Analytics } from '@vercel/analytics/react'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <LanguageProvider>
         <App />
+        <Analytics />
       </LanguageProvider>
     </BrowserRouter>
   </StrictMode>,
