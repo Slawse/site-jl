@@ -834,6 +834,79 @@ section {
   height: 18px;
 }
 
+.contact-detail {
+  flex-wrap: wrap;
+}
+
+.contact-detail-link {
+  color: var(--white);
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.contact-detail-link:hover {
+  text-decoration-color: var(--white);
+}
+
+/* ---------- Copy email button ---------- */
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-600);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.copy-email-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.copy-email-btn:hover {
+  color: var(--ink-900);
+  border-color: rgba(28, 31, 34, 0.3);
+}
+
+.copy-email-btn.is-copied {
+  color: var(--brand-blue);
+  border-color: var(--brand-blue-accent);
+}
+
+.copy-email-btn-dark {
+  color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.copy-email-btn-dark:hover {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.copy-email-btn-dark.is-copied {
+  color: var(--white);
+  border-color: var(--brand-blue-accent);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-email-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
 .contact-form {
   background: var(--paper);
   border: 1px solid var(--border);

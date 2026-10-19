@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
+import CopyEmailButton from './CopyEmailButton'
 
 const CONTACT_EMAIL = 'jean-louis@jll-conseil-innovation.com'
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnpqaqel'
@@ -48,7 +49,10 @@ function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l9 7 9-7M3 6h18v12H3V6z" />
                   </svg>
                 </span>
-                {CONTACT_EMAIL}
+                <a href={`mailto:${CONTACT_EMAIL}`} className="contact-detail-link">
+                  {CONTACT_EMAIL}
+                </a>
+                <CopyEmailButton email={CONTACT_EMAIL} className="copy-email-btn-dark" />
               </div>
             </div>
           </div>
