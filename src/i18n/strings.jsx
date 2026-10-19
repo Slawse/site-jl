@@ -138,11 +138,6 @@ export const STRINGS = {
       success: 'Merci, votre message a bien été envoyé. Je reviens vers vous rapidement.',
       error: "Une erreur est survenue lors de l'envoi. Vous pouvez aussi écrire directement à",
     },
-    copyEmail: {
-      copy: 'Copier',
-      copied: 'Copié',
-      aria: "Copier l'adresse email",
-    },
     footer: {
       tagline: "Faire performer les laboratoires qui portent l'innovation.",
       navTitle: 'Navigation',
@@ -351,11 +346,6 @@ export const STRINGS = {
       sending: 'Sending…',
       success: "Thank you, your message has been sent. I'll get back to you shortly.",
       error: 'Something went wrong while sending. You can also write directly to',
-    },
-    copyEmail: {
-      copy: 'Copy',
-      copied: 'Copied',
-      aria: 'Copy email address',
     },
     footer: {
       tagline: 'Helping innovation-driven laboratories perform.',

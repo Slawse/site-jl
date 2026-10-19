@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
-import CopyEmailButton from './CopyEmailButton'
 
 const CONTACT_EMAIL = 'jean-louis@jll-conseil-innovation.com'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/jean-louis-labernardi%C3%A8re-780a0980/'
@@ -28,15 +27,12 @@ function Footer() {
 
         <div className="footer-contact">
           <span className="footer-col-title">{f.contactTitle}</span>
-          <div className="footer-email-row">
-            <a href={`mailto:${CONTACT_EMAIL}`} className="footer-contact-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l9 7 9-7M3 6h18v12H3V6z" />
-              </svg>
-              {CONTACT_EMAIL}
-            </a>
-            <CopyEmailButton email={CONTACT_EMAIL} />
-          </div>
+          <a href={`mailto:${CONTACT_EMAIL}`} className="footer-contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l9 7 9-7M3 6h18v12H3V6z" />
+            </svg>
+            {CONTACT_EMAIL}
+          </a>
           <a
             href={LINKEDIN_URL}
             target="_blank"
