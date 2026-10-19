@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const CONTACT_EMAIL = 'jean-louis@jll-conseil-innovation.com'
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnpqaqel'
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xjygdonw'
 
 function Contact() {
   const [status, setStatus] = useState('idle') // idle | sending | success | error
