@@ -17,7 +17,7 @@ function MentionsLegales() {
             <li key={item}>{item}</li>
           ))}
           <li>
-            {m.contactLabel} <a href="mailto:j.labernardiere@gmail.com">j.labernardiere@gmail.com</a>
+            {m.contactLabel} <a href="mailto:jean-louis@jll-conseil-innovation.com">jean-louis@jll-conseil-innovation.com</a>
           </li>
         </ul>
 

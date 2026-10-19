@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 
-const CONTACT_EMAIL = 'j.labernardiere@gmail.com'
+const CONTACT_EMAIL = 'jean-louis@jll-conseil-innovation.com'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/jean-louis-labernardi%C3%A8re-780a0980/'
 
 function Footer() {

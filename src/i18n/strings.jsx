@@ -200,7 +200,7 @@ export const STRINGS = {
           Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi
           Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et de
           suppression de vos données. Pour l'exercer, contactez-nous à{' '}
-          <a href="mailto:j.labernardiere@gmail.com">j.labernardiere@gmail.com</a>.
+          <a href="mailto:jean-louis@jll-conseil-innovation.com">jean-louis@jll-conseil-innovation.com</a>.
         </>
       ),
       h5: 'Cookies',
@@ -408,7 +408,7 @@ export const STRINGS = {
           In accordance with the General Data Protection Regulation (GDPR) and French data
           protection law, you have the right to access, rectify and delete your data. To
           exercise this right, contact us at{' '}
-          <a href="mailto:j.labernardiere@gmail.com">j.labernardiere@gmail.com</a>.
+          <a href="mailto:jean-louis@jll-conseil-innovation.com">jean-louis@jll-conseil-innovation.com</a>.
         </>
       ),
       h5: 'Cookies',
